@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <!--Switches-->
+  <CopyAttributes Enabled="true" />
+  <UnionDuplicates Enabled="false" />
+  <Debug Enabled="1" />
+  <Internalize Enabled="false" />
+  <MergeXml Enabled="false" />
+  <!--Signing-->
+  <Sign Enabled="false" Delay="false"></Sign>
+  <!--Logging-->
+  <Log Enabled="false"></Log>
+  <!--Assemblies-->
+  <Assemblies>
+    <Assembly>D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\bin\Debug\FB_API_Plugin.dll</Assembly>
+    <Assembly>D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\bin\Debug\Newtonsoft.Json.dll</Assembly>
+    <Primary>D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\bin\Debug\FB_API_Plugin.dll</Primary>
+  </Assemblies>
+  <!--Output-->
+  <OutputAssembly>C:\Users\danny\AppData\Roaming\UBot Studio\Plugins\FBAPIPlugin.dll</OutputAssembly>
+  <!--.NET Framework-->
+  <Framework>.NET Framework 4.6 Full</Framework>
+  <!--Merge Engine-->
+  <Engine Name="ILMerge" />
+</Settings>
