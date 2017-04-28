@@ -1,0 +1,10 @@
+NOTE: The user account must
+
+1. Have access to the Graph Explorer
+https://developers.facebook.com/tools/explorer
+
+2. The user must have previously set all permissions (checkbox all permissions) and obtain a token from the above Graph Explorer (this sets the permissions on teh account to use the api and allows the plugin to reach the proper token type.
+
+Then the $fb api http graph token
+will get the token on request.
+
