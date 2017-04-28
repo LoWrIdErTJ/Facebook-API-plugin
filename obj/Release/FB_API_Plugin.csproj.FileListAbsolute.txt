@@ -1,0 +1,10 @@
+D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\bin\Release\FBAPIPlugin.dll.config
+D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\bin\Release\FBAPIPlugin.dll
+D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\bin\Release\FBAPIPlugin.pdb
+D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\bin\Release\Newtonsoft.Json.dll
+D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\bin\Release\UBotPlugin.dll
+D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\bin\Release\Newtonsoft.Json.xml
+D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\obj\Release\FB_API_Plugin.Browser.resources
+D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\obj\Release\FB_API_Plugin.csproj.GenerateResource.Cache
+D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\obj\Release\FBAPIPlugin.dll
+D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\obj\Release\FBAPIPlugin.pdb

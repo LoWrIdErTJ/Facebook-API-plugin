@@ -1,0 +1,11 @@
+D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\bin\Debug\FBAPIPlugin.dll.config
+D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\bin\Debug\FBAPIPlugin.dll
+D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\bin\Debug\FBAPIPlugin.pdb
+D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\bin\Debug\Newtonsoft.Json.dll
+D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\bin\Debug\UBotPlugin.dll
+D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\bin\Debug\Newtonsoft.Json.xml
+D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\obj\Debug\FB_API_Plugin.csprojResolveAssemblyReference.cache
+D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\obj\Debug\FB_API_Plugin.Browser.resources
+D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\obj\Debug\FB_API_Plugin.csproj.GenerateResource.Cache
+D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\obj\Debug\FBAPIPlugin.dll
+D:\!Projekte\!!C# Projects\!!Active\FB_API_Plugin\FB_API_Plugin\obj\Debug\FBAPIPlugin.pdb
