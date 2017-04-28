@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AD6B2932-BCE1-4BEE-9B7C-13F137D59BFA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FB_API_Plugin</RootNamespace>
+    <AssemblyName>FBAPIPlugin</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UBotPlugin">
+      <HintPath>..\UBotPlugin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Browser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browser.Designer.cs">
+      <DependentUpon>Browser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacebookGraphAPI.cs" />
+    <Compile Include="JsonPath.cs" />
+    <Compile Include="ObfuscationSettings.cs" />
+    <Compile Include="Ubot Functions\fb api browser login.cs" />
+    <Compile Include="Ubot Commands\fb api container.cs" />
+    <Compile Include="Ubot Functions\fb api graph token get.cs" />
+    <Compile Include="FB key.cs" />
+    <Compile Include="Ubot Functions\fbcustomrequest.cs" />
+    <Compile Include="Ubot Functions\FBError.cs" />
+    <Compile Include="Ubot Commands\FbFriendsDetails.cs" />
+    <Compile Include="Ubot Commands\FBLike.cs" />
+    <Compile Include="Ubot Commands\FBversion.cs" />
+    <Compile Include="Ubot Functions\GetFQLdata.cs" />
+    <Compile Include="Ubot Functions\GetGroupsDetails.cs" />
+    <Compile Include="Ubot Functions\GetObject.cs" />
+    <Compile Include="Ubot Functions\GetPagesDetails.cs" />
+    <Compile Include="Ubot Functions\GetUsersDetails.cs" />
+    <Compile Include="JsonPathClass.cs" />
+    <Compile Include="Ubot Commands\Post Comment.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ubot Commands\Proxy.cs" />
+    <Compile Include="Ubot Functions\Search Groups.cs" />
+    <Compile Include="Ubot Commands\SearchGroups.cs" />
+    <Compile Include="Ubot Commands\SearchGroupsByParent.cs" />
+    <Compile Include="Ubot Commands\SearchPages.cs" />
+    <Compile Include="Ubot Commands\SendStatus.cs" />
+    <Compile Include="Ubot Commands\SendWallPost.cs" />
+    <Compile Include="Ubot Commands\SetAttachement.cs" />
+    <Compile Include="Webdriver.Core\DefaultRemoteCommand.cs" />
+    <Compile Include="Webdriver.Core\DefaultSelenium.cs" />
+    <Compile Include="Webdriver.Core\HttpCommandProcessor.cs" />
+    <Compile Include="Webdriver.Core\ICommandProcessor.cs" />
+    <Compile Include="Webdriver.Core\IRemoteCommand.cs" />
+    <Compile Include="Webdriver.Core\ISelenium.cs" />
+    <Compile Include="Webdriver.Core\SeleniumException.cs" />
+    <Compile Include="Webdriver.Support\Events\EventFiringWebDriver.cs" />
+    <Compile Include="Webdriver.Support\Events\FindElementEventArgs.cs" />
+    <Compile Include="Webdriver.Support\Events\WebDriverExceptionEventArgs.cs" />
+    <Compile Include="Webdriver.Support\Events\WebDriverNavigationEventArgs.cs" />
+    <Compile Include="Webdriver.Support\Events\WebDriverScriptEventArgs.cs" />
+    <Compile Include="Webdriver.Support\Events\WebElementEventArgs.cs" />
+    <Compile Include="Webdriver.Support\Extensions\WebDriverExtensions.cs" />
+    <Compile Include="Webdriver.Support\GlobalSuppressions.cs" />
+    <Compile Include="Webdriver.Support\PageObjects\ByAll.cs" />
+    <Compile Include="Webdriver.Support\PageObjects\ByChained.cs" />
+    <Compile Include="Webdriver.Support\PageObjects\ByFactory.cs" />
+    <Compile Include="Webdriver.Support\PageObjects\ByIdOrName.cs" />
+    <Compile Include="Webdriver.Support\PageObjects\CacheLookupAttribute.cs" />
+    <Compile Include="Webdriver.Support\PageObjects\DefaultElementLocator.cs" />
+    <Compile Include="Webdriver.Support\PageObjects\DefaultElementLocatorFactory.cs" />
+    <Compile Include="Webdriver.Support\PageObjects\DefaultPageObjectMemberDecorator.cs" />
+    <Compile Include="Webdriver.Support\PageObjects\FindsByAllAttribute.cs" />
+    <Compile Include="Webdriver.Support\PageObjects\FindsByAttribute.cs" />
+    <Compile Include="Webdriver.Support\PageObjects\FindsBySequenceAttribute.cs" />
+    <Compile Include="Webdriver.Support\PageObjects\How.cs" />
+    <Compile Include="Webdriver.Support\PageObjects\IElementLocator.cs" />
+    <Compile Include="Webdriver.Support\PageObjects\IElementLocatorFactory.cs" />
+    <Compile Include="Webdriver.Support\PageObjects\IPageObjectMemberDecorator.cs" />
+    <Compile Include="Webdriver.Support\PageObjects\PageFactory.cs" />
+    <Compile Include="Webdriver.Support\PageObjects\RetryingElementLocator.cs" />
+    <Compile Include="Webdriver.Support\PageObjects\RetryingElementLocatorFactory.cs" />
+    <Compile Include="Webdriver.Support\PageObjects\WebDriverObjectProxy.cs" />
+    <Compile Include="Webdriver.Support\PageObjects\WebElementListProxy.cs" />
+    <Compile Include="Webdriver.Support\PageObjects\WebElementProxy.cs" />
+    <Compile Include="Webdriver.Support\UI\DefaultWait.cs" />
+    <Compile Include="Webdriver.Support\UI\ExpectedConditions.cs" />
+    <Compile Include="Webdriver.Support\UI\IClock.cs" />
+    <Compile Include="Webdriver.Support\UI\ILoadableComponent.cs" />
+    <Compile Include="Webdriver.Support\UI\IWait.cs" />
+    <Compile Include="Webdriver.Support\UI\LoadableComponent.cs" />
+    <Compile Include="Webdriver.Support\UI\LoadableComponentException.cs" />
+    <Compile Include="Webdriver.Support\UI\PopupWindowFinder.cs" />
+    <Compile Include="Webdriver.Support\UI\SelectElement.cs" />
+    <Compile Include="Webdriver.Support\UI\SlowLoadableComponent.cs" />
+    <Compile Include="Webdriver.Support\UI\SystemClock.cs" />
+    <Compile Include="Webdriver.Support\UI\UnexpectedTagNameException.cs" />
+    <Compile Include="Webdriver.Support\UI\WebDriverWait.cs" />
+    <Compile Include="webdriverbackedselenium\GlobalSuppressions.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\AlertOverride.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\CommandTimer.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\AddLocationStrategy.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\AddSelection.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\AltKeyDown.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\AltKeyUp.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\AssignId.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\AttachFile.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\CaptureScreenshotToString.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\Check.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\Click.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\ClickAt.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\Close.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\CompoundMutator.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\ControlKeyDown.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\ControlKeyUp.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\CreateCookie.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\DeleteAllVisibleCookies.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\DeleteCookie.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\DoubleClick.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\DragAndDrop.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\DragAndDropToObject.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\ElementFinder.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\FindFirstSelectedOptionProperty.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\FindSelectedOptionProperties.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\FireEvent.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\FireNamedEvent.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\FunctionDeclaration.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetAlert.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetAllButtons.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetAllFields.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetAllLinks.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetAllWindowTitles.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetAttribute.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetAttributeFromAllWindows.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetBodyText.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetConfirmation.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetCookie.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetCookieByName.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetCssCount.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetElementHeight.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetElementIndex.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetElementPositionLeft.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetElementPositionTop.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetElementWidth.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetEval.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetExpression.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetHtmlSource.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetLocation.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetSelectOptions.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetTable.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetText.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetTitle.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetValue.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GetXpathCount.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\GoBack.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\Highlight.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\IFilterFunction.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\ILookupStrategy.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\IOptionSelectStrategy.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\IsAlertPresent.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\IsChecked.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\IsConfirmationPresent.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\IsCookiePresent.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\IScriptMutator.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\IsEditable.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\IsElementPresent.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\IsOrdered.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\IsSomethingSelected.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\IsTextPresent.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\IsVisible.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\ITextMatchingStrategy.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\JavaScriptLibrary.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\KeyEvent.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\KeyState.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\MetaKeyDown.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\MetaKeyUp.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\MouseEvent.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\MouseEventAt.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\NoOp.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\Open.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\OpenWindow.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\Refresh.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\RemoveAllSelections.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\RemoveSelection.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\RunScript.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\SelectFrame.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\SelectOption.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\SelectWindow.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\SeleneseCommand.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\SeleniumMutator.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\SeleniumSelect.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\SetNextConfirmationState.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\SetTimeout.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\ShiftKeyDown.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\ShiftKeyUp.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\Submit.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\Type.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\TypeKeys.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\Uncheck.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\VariableDeclaration.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\Waiter.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\WaitForCondition.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\WaitForPageToLoad.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\WaitForPopup.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\WindowFocus.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\WindowMaximize.cs" />
+    <Compile Include="webdriverbackedselenium\Internal\SeleniumEmulation\WindowSelector.cs" />
+    <Compile Include="webdriverbackedselenium\WebdriverBackedSelenium.cs" />
+    <Compile Include="webdriverbackedselenium\WebDriverCommandProcessor.cs" />
+    <Compile Include="Webdriver\By.cs" />
+    <Compile Include="Webdriver\Chrome\ChromeDriver.cs" />
+    <Compile Include="Webdriver\Chrome\ChromeDriverService.cs" />
+    <Compile Include="Webdriver\Chrome\ChromeOptions.cs" />
+    <Compile Include="Webdriver\Chrome\ChromeWebElement.cs" />
+    <Compile Include="Webdriver\Cookie.cs" />
+    <Compile Include="Webdriver\DefaultFileDetector.cs" />
+    <Compile Include="Webdriver\DriverService.cs" />
+    <Compile Include="Webdriver\DriverServiceNotFoundException.cs" />
+    <Compile Include="Webdriver\Edge\EdgeDriver.cs" />
+    <Compile Include="Webdriver\Edge\EdgeDriverService.cs" />
+    <Compile Include="Webdriver\Edge\EdgeOptions.cs" />
+    <Compile Include="Webdriver\Edge\EdgeWebElement.cs" />
+    <Compile Include="Webdriver\ElementNotVisibleException.cs" />
+    <Compile Include="Webdriver\Firefox\FirefoxBinary.cs" />
+    <Compile Include="Webdriver\Firefox\FirefoxDriver.cs" />
+    <Compile Include="Webdriver\Firefox\FirefoxDriverCommandExecutor.cs" />
+    <Compile Include="Webdriver\Firefox\FirefoxDriverServer.cs" />
+    <Compile Include="Webdriver\Firefox\FirefoxExtension.cs" />
+    <Compile Include="Webdriver\Firefox\FirefoxProfile.cs" />
+    <Compile Include="Webdriver\Firefox\FirefoxProfileManager.cs" />
+    <Compile Include="Webdriver\Firefox\FirefoxWebElement.cs" />
+    <Compile Include="Webdriver\Firefox\Internal\Executable.cs" />
+    <Compile Include="Webdriver\Firefox\Internal\ILock.cs" />
+    <Compile Include="Webdriver\Firefox\Internal\IniFileReader.cs" />
+    <Compile Include="Webdriver\Firefox\Internal\SocketLock.cs" />
+    <Compile Include="Webdriver\Firefox\Preferences.cs" />
+    <Compile Include="Webdriver\GlobalSuppressions.cs" />
+    <Compile Include="Webdriver\IAlert.cs" />
+    <Compile Include="Webdriver\IAllowsFileDetection.cs" />
+    <Compile Include="Webdriver\ICapabilities.cs" />
+    <Compile Include="Webdriver\ICookieJar.cs" />
+    <Compile Include="Webdriver\IE\InternetExplorerDriver.cs" />
+    <Compile Include="Webdriver\IE\InternetExplorerDriverEngine.cs" />
+    <Compile Include="Webdriver\IE\InternetExplorerDriverLogLevel.cs" />
+    <Compile Include="Webdriver\IE\InternetExplorerDriverService.cs" />
+    <Compile Include="Webdriver\IE\InternetExplorerOptions.cs" />
+    <Compile Include="Webdriver\IE\InternetExplorerWebElement.cs" />
+    <Compile Include="Webdriver\IFileDetector.cs" />
+    <Compile Include="Webdriver\IHasCapabilities.cs" />
+    <Compile Include="Webdriver\IHasInputDevices.cs" />
+    <Compile Include="Webdriver\IHasTouchScreen.cs" />
+    <Compile Include="Webdriver\IJavascriptExecutor.cs" />
+    <Compile Include="Webdriver\IKeyboard.cs" />
+    <Compile Include="Webdriver\IllegalLocatorException.cs" />
+    <Compile Include="Webdriver\ILocatable.cs" />
+    <Compile Include="Webdriver\IMouse.cs" />
+    <Compile Include="Webdriver\INavigation.cs" />
+    <Compile Include="Webdriver\Interactions\Actions.cs" />
+    <Compile Include="Webdriver\Interactions\ButtonReleaseAction.cs" />
+    <Compile Include="Webdriver\Interactions\ClickAction.cs" />
+    <Compile Include="Webdriver\Interactions\ClickAndHoldAction.cs" />
+    <Compile Include="Webdriver\Interactions\CompositeAction.cs" />
+    <Compile Include="Webdriver\Interactions\ContextClickAction.cs" />
+    <Compile Include="Webdriver\Interactions\DoubleClickAction.cs" />
+    <Compile Include="Webdriver\Interactions\DoubleTapAction.cs" />
+    <Compile Include="Webdriver\Interactions\FlickAction.cs" />
+    <Compile Include="Webdriver\Interactions\IAction.cs" />
+    <Compile Include="Webdriver\Interactions\ICoordinates.cs" />
+    <Compile Include="Webdriver\Interactions\KeyboardAction.cs" />
+    <Compile Include="Webdriver\Interactions\KeyDownAction.cs" />
+    <Compile Include="Webdriver\Interactions\KeyUpAction.cs" />
+    <Compile Include="Webdriver\Interactions\LongPressAction.cs" />
+    <Compile Include="Webdriver\Interactions\MouseAction.cs" />
+    <Compile Include="Webdriver\Interactions\MoveMouseAction.cs" />
+    <Compile Include="Webdriver\Interactions\MoveToOffsetAction.cs" />
+    <Compile Include="Webdriver\Interactions\ScreenMoveAction.cs" />
+    <Compile Include="Webdriver\Interactions\ScreenPressAction.cs" />
+    <Compile Include="Webdriver\Interactions\ScreenReleaseAction.cs" />
+    <Compile Include="Webdriver\Interactions\ScrollAction.cs" />
+    <Compile Include="Webdriver\Interactions\SendKeysAction.cs" />
+    <Compile Include="Webdriver\Interactions\SingleKeyAction.cs" />
+    <Compile Include="Webdriver\Interactions\SingleTapAction.cs" />
+    <Compile Include="Webdriver\Interactions\TouchAction.cs" />
+    <Compile Include="Webdriver\Interactions\TouchActions.cs" />
+    <Compile Include="Webdriver\Interactions\WebDriverAction.cs" />
+    <Compile Include="Webdriver\Internal\AsyncJavaScriptExecutor.cs" />
+    <Compile Include="Webdriver\Internal\FileUtilities.cs" />
+    <Compile Include="Webdriver\Internal\IFindsByClassName.cs" />
+    <Compile Include="Webdriver\Internal\IFindsByCssSelector.cs" />
+    <Compile Include="Webdriver\Internal\IFindsById.cs" />
+    <Compile Include="Webdriver\Internal\IFindsByLinkText.cs" />
+    <Compile Include="Webdriver\Internal\IFindsByName.cs" />
+    <Compile Include="Webdriver\Internal\IFindsByPartialLinkText.cs" />
+    <Compile Include="Webdriver\Internal\IFindsByTagName.cs" />
+    <Compile Include="Webdriver\Internal\IFindsByXPath.cs" />
+    <Compile Include="Webdriver\Internal\IWrapsDriver.cs" />
+    <Compile Include="Webdriver\Internal\IWrapsElement.cs" />
+    <Compile Include="Webdriver\Internal\NativeMethods.cs" />
+    <Compile Include="Webdriver\Internal\PortUtilities.cs" />
+    <Compile Include="Webdriver\Internal\ResourceUtilities.cs" />
+    <Compile Include="Webdriver\Internal\ReturnedCookie.cs" />
+    <Compile Include="Webdriver\Internal\ZipStorer.cs" />
+    <Compile Include="Webdriver\InvalidCookieDomainException.cs" />
+    <Compile Include="Webdriver\InvalidElementStateException.cs" />
+    <Compile Include="Webdriver\InvalidSelectorException.cs" />
+    <Compile Include="Webdriver\IOptions.cs" />
+    <Compile Include="Webdriver\IRotatable.cs" />
+    <Compile Include="Webdriver\ISearchContext.cs" />
+    <Compile Include="Webdriver\ITakesScreenshot.cs" />
+    <Compile Include="Webdriver\ITargetLocator.cs" />
+    <Compile Include="Webdriver\ITimeouts.cs" />
+    <Compile Include="Webdriver\ITouchScreen.cs" />
+    <Compile Include="Webdriver\IWebDriver.cs" />
+    <Compile Include="Webdriver\IWebElement.cs" />
+    <Compile Include="Webdriver\IWindow.cs" />
+    <Compile Include="Webdriver\Keys.cs" />
+    <Compile Include="Webdriver\NoAlertPresentException.cs" />
+    <Compile Include="Webdriver\NoSuchElementException.cs" />
+    <Compile Include="Webdriver\NoSuchFrameException.cs" />
+    <Compile Include="Webdriver\NoSuchWindowException.cs" />
+    <Compile Include="Webdriver\NotFoundException.cs" />
+    <Compile Include="Webdriver\Opera\OperaDriver.cs" />
+    <Compile Include="Webdriver\Opera\OperaDriverService.cs" />
+    <Compile Include="Webdriver\Opera\OperaOptions.cs" />
+    <Compile Include="Webdriver\Opera\OperaWebElement.cs" />
+    <Compile Include="Webdriver\PhantomJS\CommandLineArgumentNameAttribute.cs" />
+    <Compile Include="Webdriver\PhantomJS\PhantomJSDriver.cs" />
+    <Compile Include="Webdriver\PhantomJS\PhantomJSDriverService.cs" />
+    <Compile Include="Webdriver\PhantomJS\PhantomJSOptions.cs" />
+    <Compile Include="Webdriver\PhantomJS\PhantomJSWebElement.cs" />
+    <Compile Include="Webdriver\Platform.cs" />
+    <Compile Include="Webdriver\Proxy.cs" />
+    <Compile Include="Webdriver\Remote\CapabilityType.cs" />
+    <Compile Include="Webdriver\Remote\Command.cs" />
+    <Compile Include="Webdriver\Remote\CommandInfo.cs" />
+    <Compile Include="Webdriver\Remote\CommandInfoRepository.cs" />
+    <Compile Include="Webdriver\Remote\DesiredCapabilities.cs" />
+    <Compile Include="Webdriver\Remote\DriverCommand.cs" />
+    <Compile Include="Webdriver\Remote\DriverServiceCommandExecutor.cs" />
+    <Compile Include="Webdriver\Remote\ErrorResponse.cs" />
+    <Compile Include="Webdriver\Remote\GlobalSuppressions.cs" />
+    <Compile Include="Webdriver\Remote\HttpCommandExecutor.cs" />
+    <Compile Include="Webdriver\Remote\ICommandExecutor.cs" />
+    <Compile Include="Webdriver\Remote\ICommandServer.cs" />
+    <Compile Include="Webdriver\Remote\JsonConverters\CharArrayJsonConverter.cs" />
+    <Compile Include="Webdriver\Remote\JsonConverters\DesiredCapabilitiesJsonConverter.cs" />
+    <Compile Include="Webdriver\Remote\JsonConverters\PlatformJsonConverter.cs" />
+    <Compile Include="Webdriver\Remote\JsonConverters\ResponseValueJsonConverter.cs" />
+    <Compile Include="Webdriver\Remote\LocalFileDetector.cs" />
+    <Compile Include="Webdriver\Remote\RemoteAlert.cs" />
+    <Compile Include="Webdriver\Remote\RemoteCookieJar.cs" />
+    <Compile Include="Webdriver\Remote\RemoteCoordinates.cs" />
+    <Compile Include="Webdriver\Remote\RemoteKeyboard.cs" />
+    <Compile Include="Webdriver\Remote\RemoteMouse.cs" />
+    <Compile Include="Webdriver\Remote\RemoteNavigator.cs" />
+    <Compile Include="Webdriver\Remote\RemoteOptions.cs" />
+    <Compile Include="Webdriver\Remote\RemoteTargetLocator.cs" />
+    <Compile Include="Webdriver\Remote\RemoteTimeouts.cs" />
+    <Compile Include="Webdriver\Remote\RemoteTouchScreen.cs" />
+    <Compile Include="Webdriver\Remote\RemoteWebDriver.cs" />
+    <Compile Include="Webdriver\Remote\RemoteWebElement.cs" />
+    <Compile Include="Webdriver\Remote\RemoteWindow.cs" />
+    <Compile Include="Webdriver\Remote\Response.cs" />
+    <Compile Include="Webdriver\Remote\SessionId.cs" />
+    <Compile Include="Webdriver\Remote\StackTraceElement.cs" />
+    <Compile Include="Webdriver\Safari\Internal\AcceptEventArgs.cs" />
+    <Compile Include="Webdriver\Safari\Internal\BinaryMessageHandledEventArgs.cs" />
+    <Compile Include="Webdriver\Safari\Internal\ConnectionEventArgs.cs" />
+    <Compile Include="Webdriver\Safari\Internal\ErrorEventArgs.cs" />
+    <Compile Include="Webdriver\Safari\Internal\FrameType.cs" />
+    <Compile Include="Webdriver\Safari\Internal\HandlerFactory.cs" />
+    <Compile Include="Webdriver\Safari\Internal\Handlers\Hybi00Handler.cs" />
+    <Compile Include="Webdriver\Safari\Internal\Handlers\RequestHandler.cs" />
+    <Compile Include="Webdriver\Safari\Internal\Handlers\Rfc6455Handler.cs" />
+    <Compile Include="Webdriver\Safari\Internal\HandshakeException.cs" />
+    <Compile Include="Webdriver\Safari\Internal\IHandler.cs" />
+    <Compile Include="Webdriver\Safari\Internal\IntExtensions.cs" />
+    <Compile Include="Webdriver\Safari\Internal\IRequestParser.cs" />
+    <Compile Include="Webdriver\Safari\Internal\ISocket.cs" />
+    <Compile Include="Webdriver\Safari\Internal\IWebSocketConnection.cs" />
+    <Compile Include="Webdriver\Safari\Internal\IWebSocketConnectionInfo.cs" />
+    <Compile Include="Webdriver\Safari\Internal\IWebSocketServer.cs" />
+    <Compile Include="Webdriver\Safari\Internal\ReadState.cs" />
+    <Compile Include="Webdriver\Safari\Internal\ReceivedEventArgs.cs" />
+    <Compile Include="Webdriver\Safari\Internal\RequestParser.cs" />
+    <Compile Include="Webdriver\Safari\Internal\SocketWrapper.cs" />
+    <Compile Include="Webdriver\Safari\Internal\StandardHttpRequestReceivedEventArgs.cs" />
+    <Compile Include="Webdriver\Safari\Internal\TextMessageHandledEventArgs.cs" />
+    <Compile Include="Webdriver\Safari\Internal\WebSocketConnection.cs" />
+    <Compile Include="Webdriver\Safari\Internal\WebSocketConnectionInfo.cs" />
+    <Compile Include="Webdriver\Safari\Internal\WebSocketException.cs" />
+    <Compile Include="Webdriver\Safari\Internal\WebSocketHttpRequest.cs" />
+    <Compile Include="Webdriver\Safari\Internal\WebSocketServer.cs" />
+    <Compile Include="Webdriver\Safari\Internal\WebSocketStatusCodes.cs" />
+    <Compile Include="Webdriver\Safari\SafariCommand.cs" />
+    <Compile Include="Webdriver\Safari\SafariCommandMessage.cs" />
+    <Compile Include="Webdriver\Safari\SafariDriver.cs" />
+    <Compile Include="Webdriver\Safari\SafariDriverCommandExecutor.cs" />
+    <Compile Include="Webdriver\Safari\SafariDriverConnection.cs" />
+    <Compile Include="Webdriver\Safari\SafariDriverServer.cs" />
+    <Compile Include="Webdriver\Safari\SafariOptions.cs" />
+    <Compile Include="Webdriver\Safari\SafariResponseMessage.cs" />
+    <Compile Include="Webdriver\ScreenOrientation.cs" />
+    <Compile Include="Webdriver\Screenshot.cs" />
+    <Compile Include="Webdriver\StaleElementReferenceException.cs" />
+    <Compile Include="Webdriver\UnableToSetCookieException.cs" />
+    <Compile Include="Webdriver\UnhandledAlertException.cs" />
+    <Compile Include="Webdriver\WebDriverException.cs" />
+    <Compile Include="Webdriver\WebDriverResult.cs" />
+    <Compile Include="Webdriver\WebDriverTimeoutException.cs" />
+    <Compile Include="Webdriver\XPathLookupException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Browser.resx">
+      <DependentUpon>Browser.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Webdriver\Settings.StyleCop" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Webdriver\WebDriver.csproj" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" --msbuild-solution-path "$(SolutionPath)" -n --newline-flush -v 5.0</PostBuildEvent>
+  </PropertyGroup>
+</Project>
